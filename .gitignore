@@ -1,0 +1,8 @@
+.idea/
+aws/.idea
+
+
+.terraform
+terraform.tfstate
+terraform.tfvars
+*.tfstate*
