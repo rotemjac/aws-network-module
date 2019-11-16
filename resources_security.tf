@@ -1,4 +1,5 @@
 /*
+
 resource "aws_default_network_acl" "my_nacl" {
 
   #Cannot be set for default nacl
@@ -41,3 +42,4 @@ resource "aws_network_acl_rule" "nacl_outbound_all" {
   rule_action    = "allow"
   cidr_block     = "0.0.0.0/0" # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
 }*/
+

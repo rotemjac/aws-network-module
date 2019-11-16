@@ -30,12 +30,12 @@ resource "aws_route_table" "public_rt" {
 }
 
 resource "aws_route" "route_to_igw" {
-  count                  = "${var.number_of_public_subnets}"
   route_table_id         = "${aws_route_table.public_rt.id}"
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = "${aws_internet_gateway.igw.id}"
 
  #For a case where you want a route table for each subnet (please remember to uncomment all the other places in this file)
  #route_table_id         = "${element(aws_route_table.public_rt.*.id, count.index)}"
+ #count                  = "${var.number_of_public_subnets}"
 }
 
